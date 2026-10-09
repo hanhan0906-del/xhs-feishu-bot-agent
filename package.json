@@ -1,0 +1,19 @@
+{
+  "name": "xhs-feishu-chatbot-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env src/feishu-bot.mjs",
+    "register:app": "node scripts/register-feishu-bot-app.mjs",
+    "authorize:config": "node --env-file=.env scripts/authorize-feishu-config-scope.mjs",
+    "authorize:messages": "node --env-file=.env scripts/authorize-feishu-message-scopes.mjs",
+    "configure:events": "node --env-file=.env scripts/configure-feishu-events.mjs",
+    "publish:app": "node --env-file=.env scripts/publish-feishu-app.mjs",
+    "inspect:app": "node --env-file=.env scripts/inspect-feishu-app.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.71.1"
+  }
+}
